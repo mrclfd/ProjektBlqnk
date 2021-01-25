@@ -75,7 +75,7 @@ LOGSPAMMER = sb(os.environ.get("LOGSPAMMER") or "True")
 ALIVE_NAME = os.environ.get("ALIVE_NAME") or None
 
 # Default .alive logo
-ALIVE_LOGO = os.environ.get("ALIVE_LOGO") or None
+ALIVE_LOGO = (os.environ.get("ALIVE_LOGO") or "https://telegra.ph/file/c91c060dc6e4aaf53db71.jpg")
 
 # Default .alive username
 ALIVE_USERNAME = os.environ.get("ALIVE_USERNAME") or None
@@ -94,7 +94,7 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN") or None
 
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = (os.environ.get("UPSTREAM_REPO_URL")
-                     or "https://github.com/alfianandaa/ProjectAlf")
+                     or "https://github.com/mrclfd/ProjektBlqnk")
 
 # UPSTREAM_REPO_URL branch, the default is master
 UPSTREAM_REPO_BRANCH = os.environ.get("UPSTREAM_REPO_BRANCH") or "master"
@@ -167,7 +167,7 @@ TEMP_DOWNLOAD_DIRECTORY = os.environ.get(
     "TMP_DOWNLOAD_DIRECTORY") or "./downloads"
 
 # Terminal Alias
-TERM_ALIAS = os.environ.get("TERM_ALIAS") or "ProjectAlf"
+TERM_ALIAS = os.environ.get("TERM_ALIAS") or "ProjektBlqnk"
 
 # Genius Lyrics API
 GENIUS = os.environ.get("GENIUS_ACCESS_TOKEN") or None
@@ -243,7 +243,7 @@ def paginate_help(page_number, loaded_modules, prefix):
     helpable_modules = [p for p in loaded_modules if not p.startswith("_")]
     helpable_modules = sorted(helpable_modules)
     modules = [
-        custom.Button.inline("{} {}".format("▫️", x), data="ub_modul_{}".format(x))
+        custom.Button.inline("{} {}".format("//", x), data="ub_modul_{}".format(x))
         for x in helpable_modules
     ]
     pairs = list(zip(modules[::number_of_cols], modules[1::number_of_cols]))
@@ -257,10 +257,10 @@ def paginate_help(page_number, loaded_modules, prefix):
         ] + [
             (
                 custom.Button.inline(
-                    "⬅️", data="{}_prev({})".format(prefix, modulo_page)
+                    "<~", data="{}_prev({})".format(prefix, modulo_page)
                 ),
                 custom.Button.inline(
-                    "➡️", data="{}_next({})".format(prefix, modulo_page)
+                    "~>", data="{}_next({})".format(prefix, modulo_page)
                 ),
             )
         ]
@@ -283,7 +283,7 @@ with bot:
         async def handler(event):
             if event.message.from_id != uid:
                 await event.reply(
-                    "I'm [ProjectAlf](https://github.com/alfianandaa/ProjectAlf) modules helper...\nplease make your own bot, don't use mine 😋"
+                    "I'm [ProjektBlqnk](https://github.com/mrclfd/ProjektBlqnk) modules helper...\nplease make your own bot, don't use mine 😋"
                 )
             else:
                 await event.reply(f"`Hey there {ALIVE_NAME}\n\nI work for you :)`")
@@ -298,7 +298,7 @@ with bot:
                 result = builder.article(
                     "Please Use Only With .help Command",
                     text="{}\nTotal loaded modules: {}".format(
-                        "[ProjectAlf](https://github.com/alfianandaa/ProjectAlf) modules helper.\n",
+                        "[ProjektBlqnk](https://github.com/mrclfd/ProjektBlqnk) modules helper.\n",
                         len(dugmeler),
                     ),
                     buttons=buttons,
@@ -306,20 +306,20 @@ with bot:
                 )
             elif query.startswith("tb_btn"):
                 result = builder.article(
-                    "ProjectAlf Helper",
+                    "ProjektBlqnk Helper",
                     text="List of Modules",
                     buttons=[],
                     link_preview=True,
                 )
             else:
                 result = builder.article(
-                    "ProjectAlf",
+                    "ProjektBlqnk",
                     text="""You can convert your account to bot and use them. Remember, you can't manage someone else's bot! All installation details are explained from GitHub address below.""",
                     buttons=[
                         [
                             custom.Button.url(
                                 "GitHub Repo",
-                                "https://github.com/alfianandaa/ProjectAlf",
+                                "https://github.com/mrclfd/ProjektBlqnk",
                             ),
                             custom.Button.url(
                                 "Support",
