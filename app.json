@@ -1,6 +1,6 @@
 {
-  "name": "Telegram ProjectAlf",
-  "description": "[ProjectAlf] A modular Telegram userbot running on Python 3.7+ with an sqlalchemy database.",
+  "name": "Telegram ProjektBlqnk",
+  "description": "[ProjektBlqnk] A modular Telegram userbot running on Python 3.7+ with an sqlalchemy database.",
   "keywords": [
     "telegram",
     "userbot",
@@ -8,7 +8,7 @@
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/alfianandaa/ProjectAlf",
+  "repository": "https://github.com/mrclfd/ProjektBlqnk",
   "website": "https://telegra.ph/How-to-host-a-Telegram-Userbot-11-02",
   "success_url": "https://t.me/userbotindo",
   "stack": "container",
@@ -40,6 +40,7 @@
     },
     "COUNTRY": {
       "description": "Set your Country to be used in the .time and .date commands.",
+      "value": "ID",
       "required": false
     },
     "TZ_NUMBER": {
@@ -65,7 +66,7 @@
     },
     "PM_AUTO_BAN": {
       "description": "PM Auto-Ban Feature Switch. Also known as the 'bleep blop, this is a bot...' module.",
-      "value": "False"
+      "value": "True"
     },
     "OCR_SPACE_API_KEY": {
       "description": "OCR API Key for .ocr command. Get from https://ocr.space/ocrapi",
@@ -85,7 +86,7 @@
     },
     "TMP_DOWNLOAD_DIRECTORY": {
       "description": "Download location for many modules (GDrive, .download etc..)",
-      "value": "./downloads/"
+      "value": "./💾/"
     },
     "QUOTES_API_TOKEN": {
       "description": "Enhance ur text to sticker. Get your own API token from http://antiddos.systems.",
@@ -117,6 +118,7 @@
     },
     "DEFAULT_BIO": {
       "description": "Default profile bio.",
+      "value": "Hoooman",
       "required": false
     },
     "ALIVE_NAME": {
@@ -176,7 +178,7 @@
     },
     "ALIVE_LOGO": {
       "description": "Image in .alive message. the value MUST A DIRECT LINK or Will Crash!",
-      "value": "https://telegra.ph/file/09b16d6627c5dfe47342e.jpg",
+      "value": "https://telegra.ph/file/c91c060dc6e4aaf53db71.jpg",
       "required": false
     },
     "USR_TOKEN_UPTOBOX": {
