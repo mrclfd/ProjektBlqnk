@@ -42,15 +42,15 @@ async def progress(
         else:
             status = "Unknown"
         progress_str = "[{0}{1}] `{2}%`".format(
-            "".join("█" for i in range(math.floor(percentage / 10))),
-            "".join("░" for i in range(10 - math.floor(percentage / 10))),
+            "".join("■" for i in range(math.floor(percentage / 10))),
+            "".join("□" for i in range(10 - math.floor(percentage / 10))),
             round(percentage, 2),
         )
         tmp = (
-            f"{progress_str} - {status}\n"
-            f"`Size:` {humanbytes(current)} of {humanbytes(total)}\n"
-            f"`Speed:` {humanbytes(speed)}\n"
-            f"`ETA:` {time_formatter(eta)}\n"
-            f"`Duration:` {time_formatter(elapsed_time)}"
+            f"{progress_str}\n"
+            f"`Size      :` {humanbytes(current)} of {humanbytes(total)}\n"
+            f"`Speed     :` {humanbytes(speed)}\n"
+            f"`Estimated :` {time_formatter(eta)}\n"
+            f"`Duration  :` {time_formatter(elapsed_time)}"
         )
         await gdrive.edit(f"`{prog_type}`\n\n" f"`Status`\n{tmp}")
